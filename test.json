@@ -1,0 +1,981 @@
+[{
+        "extCode": "101",
+        "versions": [{
+                "end-date": "2017-12-31T00:00:00",
+                "version-code": "101_2014",
+                "start-date": "2014-01-01T00:00:00",
+                "attributes": [{
+                        "attribute-name": "Motorized variant",
+                        "impact-other-attributes": true,
+                        "api-field-type": "string",
+                        "enum-service": "/idit-web/api/reference/TProductMotorizedVariantTcs/filter?fieldList=externalCode",
+                        "required": false,
+                        "attribute-code": "motorizedVariant",
+                        "api-field-name": "motorizedVariant.extCode",
+                        "attribute-type": "dropdown"
+                    }, {
+                        "attribute-name": "License plate",
+                        "impact-other-attributes": false,
+                        "api-field-type": "string",
+                        "required": true,
+                        "attribute-code": "licensePlate",
+                        "api-field-name": "insuredObjects.asset.licensePlate",
+                        "attribute-type": "string"
+                    }, {
+                        "attribute-request-template": {
+                            "productLineOptionType": {
+                                "id": 1000027
+                            }
+                        },
+                        "attribute-name": "Partner Card cover",
+                        "impact-other-attributes": true,
+                        "api-field-type": "object",
+                        "required": false,
+                        "attribute-code": "coverPartnerCard",
+                        "api-field-name": "insuredObjects.covers.[]",
+                        "attribute-type": "boolean"
+                    }, {
+                        "attribute-name": "Partner license plate",
+                        "impact-other-attributes": false,
+                        "api-field-type": "string",
+                        "required": true,
+                        "attribute-code": "licensePlatePartner",
+                        "api-field-name": "insuredObjects.asset.partnerLicensePlate",
+                        "attribute-type": "string"
+                    }
+                ],
+                "new-proposal-request-template": "",
+                "version-description": "Membership 2014"
+            }, {
+                "end-date": null,
+                "version-code": "101_2018",
+                "start-date": "2018-01-01T00:00:00",
+                "attributes": [{
+                        "attribute-name": "Breakdown variant",
+                        "impact-other-attributes": false,
+                        "api-field-type": "string",
+                        "enum-service": "/idit-web/api/reference/TProductBreakdownAssistanceTcs/filter?fieldList=externalCode",
+                        "required": false,
+                        "attribute-code": "breakdownVariant",
+                        "api-field-name": "breakdownVariant.extCode",
+                        "attribute-type": "dropdown"
+                    }, {
+                        "attribute-name": "Family variant",
+                        "impact-other-attributes": true,
+                        "api-field-type": "string",
+                        "enum-service": "/idit-web/api/reference/TProductFamilyVariantTcs/filter?fieldList=externalCode",
+                        "required": true,
+                        "attribute-code": "familyVariant",
+                        "api-field-name": "familyVariant.extCode",
+                        "attribute-type": "dropdown"
+                    }, {
+                        "attribute-request-template": {
+                            "productLineOptionType": {
+                                "id": 1000023
+                            }
+                        },
+                        "attribute-name": "Kidshelp cover",
+                        "impact-other-attributes": false,
+                        "api-field-type": "object",
+                        "required": false,
+                        "attribute-code": "coverKidshelp",
+                        "api-field-name": "insuredObjects.covers.[]",
+                        "attribute-type": "boolean"
+                    }, {
+                        "attribute-request-template": {
+                            "orderDate": "{KidsHelpOrderDate}",
+                            "engraving": "{KidsHelpEngraving}",
+                            "kidExternalNumber": "{KidsHelpChildName}",
+                            "kidsBraceletTcs": {
+                                "extCode": "{KidsHelpBraceletType}"
+                            }
+                        },
+                        "attribute-name": "KidsHelp Emergency Contact Details",
+                        "impact-other-attributes": false,
+                        "api-field-type": "object",
+                        "required": false,
+                        "attribute-code": "tableKidshelpDetails",
+                        "api-field-name": "kidBracelets",
+                        "attributes": [{
+                                "attribute-name": "Child name",
+                                "impact-other-attributes": false,
+                                "api-field-type": "string",
+                                "required": false,
+                                "attribute-code": "KidsHelpChildName",
+                                "api-field-name": "kidBracelets[].kidExternalNumber",
+                                "attribute-type": "string"
+                            }, {
+                                "attribute-name": "Engraving",
+                                "impact-other-attributes": false,
+                                "api-field-type": "string",
+                                "required": false,
+                                "attribute-code": "KidsHelpEngraving",
+                                "api-field-name": "kidBracelets[].engraving",
+                                "attribute-type": "string"
+                            }, {
+                                "attribute-name": "Order date",
+                                "impact-other-attributes": false,
+                                "api-field-type": "date",
+                                "required": false,
+                                "attribute-code": "KidsHelpOrderDate",
+                                "api-field-name": "kidBracelets[].orderDate",
+                                "attribute-type": "date"
+                            }, {
+                                "attribute-name": "Bracelet type",
+                                "impact-other-attributes": false,
+                                "api-field-type": "string",
+                                "enum-service": "/idit-web/api/reference/TKidsbraceletTcs/filter?fieldList=externalCode",
+                                "required": false,
+                                "attribute-code": "KidsHelpBraceletType",
+                                "api-field-name": "kidBracelets[].kidsBraceletTcs.extCode",
+                                "attribute-type": "dropdown"
+                            }, {
+                                "attribute-name": "Contact First name 1",
+                                "impact-other-attributes": false,
+                                "api-field-type": "string",
+                                "required": false,
+                                "attribute-code": "KidsHelpeContactFirstName1",
+                                "api-field-name": "kidBracelets[].emContactFirstName1",
+                                "attribute-type": "string"
+                            }, {
+                                "attribute-name": "Contact Last name 1",
+                                "impact-other-attributes": false,
+                                "api-field-type": "string",
+                                "required": false,
+                                "attribute-code": "KidsHelpeContactLastName1",
+                                "api-field-name": "kidBracelets[].emContactLastName1",
+                                "attribute-type": "string"
+                            }, {
+                                "attribute-name": "Contact phone 1",
+                                "impact-other-attributes": false,
+                                "api-field-type": "string",
+                                "required": false,
+                                "attribute-code": "KidsHelpeContactPhone1",
+                                "api-field-name": "kidBracelets[].emPhone1",
+                                "attribute-type": "string"
+                            }, {
+                                "attribute-name": "Contact relation 1",
+                                "impact-other-attributes": false,
+                                "api-field-type": "string",
+                                "required": false,
+                                "attribute-code": "KidsHelpeContactRelation1",
+                                "api-field-name": "kidBracelets[].emRelation1",
+                                "attribute-type": "string"
+                            }, {
+                                "attribute-name": "Contact First name 2",
+                                "impact-other-attributes": false,
+                                "api-field-type": "string",
+                                "required": false,
+                                "attribute-code": "KidsHelpeContactFirstName2",
+                                "api-field-name": "kidBracelets[].emContactFirstName2",
+                                "attribute-type": "string"
+                            }, {
+                                "attribute-name": "Contact Last name 2",
+                                "impact-other-attributes": false,
+                                "api-field-type": "string",
+                                "required": false,
+                                "attribute-code": "KidsHelpeContactLastName2",
+                                "api-field-name": "kidBracelets[].emContactLastName2",
+                                "attribute-type": "string"
+                            }, {
+                                "attribute-name": "Contact phone 2",
+                                "impact-other-attributes": false,
+                                "api-field-type": "string",
+                                "required": false,
+                                "attribute-code": "KidsHelpeContactPhone2",
+                                "api-field-name": "kidBracelets[].emPhone2",
+                                "attribute-type": "string"
+                            }, {
+                                "attribute-name": "Contact relation 2",
+                                "impact-other-attributes": false,
+                                "api-field-type": "string",
+                                "required": false,
+                                "attribute-code": "KidsHelpeContactRelation2",
+                                "api-field-name": "kidBracelets[].emRelation2",
+                                "attribute-type": "string"
+                            }, {
+                                "attribute-name": "Contact First name 3",
+                                "impact-other-attributes": false,
+                                "api-field-type": "string",
+                                "required": false,
+                                "attribute-code": "KidsHelpeContactFirstName3",
+                                "api-field-name": "kidBracelets[].emContactFirstName3",
+                                "attribute-type": "string"
+                            }, {
+                                "attribute-name": "Contact Last name 3",
+                                "impact-other-attributes": false,
+                                "api-field-type": "string",
+                                "required": false,
+                                "attribute-code": "KidsHelpeContactLastName3",
+                                "api-field-name": "kidBracelets[].emContactLastName3",
+                                "attribute-type": "string"
+                            }, {
+                                "attribute-name": "Contact phone 3",
+                                "impact-other-attributes": false,
+                                "api-field-type": "string",
+                                "required": false,
+                                "attribute-code": "KidsHelpeContactPhone3",
+                                "api-field-name": "kidBracelets[].emPhone3",
+                                "attribute-type": "string"
+                            }, {
+                                "attribute-name": "Contact relation 3",
+                                "impact-other-attributes": false,
+                                "api-field-type": "string",
+                                "required": false,
+                                "attribute-code": "KidsHelpeContactRelation3",
+                                "api-field-name": "kidBracelets[].emRelation3",
+                                "attribute-type": "string"
+                            }
+                        ],
+                        "attribute-type": "array"
+                    }
+                ],
+                "new-proposal-request-template": {
+                    "policyHolderExternalNumber": "{policyHolderExternalNumber}",
+                    "product": {
+                        "extCode": "101"
+                    },
+                    "startDate": "{policyStartDate}",
+                    "breakdownVariant": {
+                        "extCode": "{breakdownVariant}"
+                    },
+                    "familyVariant": {
+                        "extCode": "{familyVariant}"
+                    },
+                    "insuredObjects": [{
+                            "asset": {
+                                "@type": "interfaces:AssetPersonIVO",
+                                "assetTypeVO": {
+                                    "id": 5
+                                },
+                                "contactExtNum": "{insuredExternalNumber}"
+                            },
+                            "lob": {
+                                "id": 1000000
+                            },
+                            "assetType": {
+                                "id": 5
+                            }
+                        }
+                    ],
+                    "collectionMethod": {
+                        "extCode": "QR-Bill"
+                    },
+                    "channel": {
+                        "id": 100
+                    }
+                },
+                "version-description": "Membership 2018"
+            }
+        ],
+        "id": 1000002,
+        "desc": "TCS Membership"
+    }, {
+        "extCode": "102",
+        "versions": [{
+                "end-date": null,
+                "version-code": "102",
+                "start-date": "2000-01-01T00:00:00",
+                "new-proposal-request-template": {
+                    "policyHolderExternalNumber": "{policyHolderExternalNumber}",
+                    "product": {
+                        "extCode": "102"
+                    },
+                    "startDate": "{policyStartDate}",
+                    "insuredObjects": [{
+                            "asset": {
+                                "@type": "interfaces:AssetPersonIVO",
+                                "assetTypeVO": {
+                                    "id": 5
+                                },
+                                "contactExtNum": "{insuredExternalNumber}"
+                            },
+                            "lob": {
+                                "id": 1000000
+                            },
+                            "assetType": {
+                                "id": 5
+                            }
+                        }
+                    ],
+                    "collectionMethod": {
+                        "extCode": "QR-Bill"
+                    },
+                    "channel": {
+                        "id": 100
+                    }
+                },
+                "version-description": "Camping Membership"
+            }
+        ],
+        "id": 1000001,
+        "desc": "TCS Camping Membership"
+    }, {
+        "extCode": "103",
+        "versions": [{
+                "end-date": "2018-12-31T00:00:00",
+                "version-code": "103_2013",
+                "start-date": "2013-01-01T00:00:00",
+                "attributes": [{
+                        "attribute-name": "Family variant",
+                        "impact-other-attributes": false,
+                        "api-field-type": "string",
+                        "enum-service": "/idit-web/api/reference/TProductFamilyVariantTcs/filter?fieldList=externalCode",
+                        "required": true,
+                        "attribute-code": "familyVariant",
+                        "api-field-name": "familyVariant.extCode",
+                        "attribute-type": "dropdown"
+                    }, {
+                        "attribute-name": "Motorized variant",
+                        "impact-other-attributes": true,
+                        "api-field-type": "string",
+                        "enum-service": "/idit-web/api/reference/TProductMotorizedVariantTcs/filter?fieldList=externalCod",
+                        "required": false,
+                        "attribute-code": "motorizedVariant",
+                        "api-field-name": "motorizedVariant.extCode",
+                        "attribute-type": "dropdown"
+                    }, {
+                        "attribute-name": "Cover area",
+                        "impact-other-attributes": false,
+                        "api-field-type": "string",
+                        "enum-service": "/idit-web/api/reference/TProductCoverAreaTcs/filter?fieldList=externalCode",
+                        "required": false,
+                        "attribute-code": "coverArea",
+                        "api-field-name": "coverArea.extCode",
+                        "attribute-type": "dropdown"
+                    }, {
+                        "attribute-request-template": {
+                            "productLineOptionType": {
+                                "id": 1000031
+                            }
+                        },
+                        "attribute-name": "Medical Costs cover",
+                        "impact-other-attributes": false,
+                        "api-field-type": "object",
+                        "required": false,
+                        "attribute-code": "coverMedicalCost",
+                        "api-field-name": "insuredObjects.covers.[]",
+                        "attribute-type": "boolean"
+                    }
+                ],
+                "new-proposal-request-template": "",
+                "version-description": "ETI Travel 2013"
+            }, {
+                "end-date": null,
+                "version-code": "103_2019",
+                "start-date": "2019-01-01T00:00:00",
+                "attributes": [{
+                        "attribute-name": "Family variant",
+                        "impact-other-attributes": false,
+                        "api-field-type": "string",
+                        "enum-service": "/idit-web/api/reference/TProductFamilyVariantTcs/filter?fieldList=externalCode",
+                        "required": true,
+                        "attribute-code": "familyVariant",
+                        "api-field-name": "familyVariant.extCode",
+                        "attribute-type": "dropdown"
+                    }, {
+                        "attribute-name": "Cover type",
+                        "impact-other-attributes": false,
+                        "api-field-type": "string",
+                        "enum-service": "/idit-web/api/reference/TProductCoverTypeTcs/filter?fieldList=externalCode",
+                        "required": false,
+                        "attribute-code": "coverType",
+                        "api-field-name": "coverType.extCode",
+                        "attribute-type": "dropdown"
+                    }, {
+                        "attribute-name": "Cover area",
+                        "impact-other-attributes": false,
+                        "api-field-type": "string",
+                        "enum-service": "/idit-web/api/reference/TProductCoverAreaTcs/filter?fieldList=externalCode",
+                        "required": false,
+                        "attribute-code": "coverArea",
+                        "api-field-name": "coverArea.extCode",
+                        "attribute-type": "dropdown"
+                    }
+                ],
+                "new-proposal-request-template": {
+                    "policyHolderExternalNumber": "{policyHolderExternalNumber}",
+                    "product": {
+                        "extCode": "103"
+                    },
+                    "startDate": "{policyStartDate}",
+                    "familyVariant": {
+                        "extCode": "{familyVariant}"
+                    },
+                    "coverType": {
+                        "extCode": "{coverType}"
+                    },
+                    "coverArea": {
+                        "extCode": "{coverArea}"
+                    },
+                    "insuredObjects": [{
+                            "asset": {
+                                "@type": "interfaces:AssetPersonIVO",
+                                "assetTypeVO": {
+                                    "id": 5
+                                },
+                                "contactExtNum": "{insuredExternalNumber}"
+                            },
+                            "lob": {
+                                "id": 6
+                            },
+                            "assetType": {
+                                "id": 5
+                            }
+                        }
+                    ],
+                    "collectionMethod": {
+                        "extCode": "QR-Bill"
+                    },
+                    "channel": {
+                        "id": 100
+                    }
+                },
+                "version-description": "ETI Travel 2019"
+            }
+        ],
+        "id": 1000003,
+        "desc": "TCS ETI Travel"
+    }, {
+        "extCode": "107",
+        "versions": [{
+                "end-date": null,
+                "version-code": "107",
+                "start-date": "2000-01-01T00:00:00",
+                "attributes": [{
+                        "attribute-name": "Family variant",
+                        "impact-other-attributes": false,
+                        "api-field-type": "string",
+                        "enum-service": "/idit-web/api/reference/TProductFamilyVariantTcs/filter?fieldList=externalCode",
+                        "required": true,
+                        "attribute-code": "familyVariant",
+                        "api-field-name": "familyVariant.extCode",
+                        "attribute-type": "dropdown"
+                    }, {
+                        "attribute-name": "Previous policy with different company?",
+                        "impact-other-attributes": false,
+                        "api-field-type": "boolean",
+                        "required": false,
+                        "attribute-code": "prevPolWithDiffCompany",
+                        "api-field-name": "prevPolWithDiffCompany",
+                        "attribute-type": "boolean"
+                    }, {
+                        "attribute-name": "Cover type",
+                        "impact-other-attributes": false,
+                        "api-field-type": "string",
+                        "enum-service": "/idit-web/api/reference/TProductCoverTypeTcs/filter?fieldList=externalCode",
+                        "required": false,
+                        "attribute-code": "coverType",
+                        "api-field-name": "coverType.extCode",
+                        "attribute-type": "dropdown"
+                    }
+                ],
+                "new-proposal-request-template": {
+                    "policyHolderExternalNumber": "{policyHolderExternalNumber}",
+                    "product": {
+                        "extCode": "107"
+                    },
+                    "startDate": "{policyStartDate}",
+                    "familyVariant": {
+                        "extCode": "{familyVariant}"
+                    },
+                    "prevPolWithDiffCompany": "{prevPolWithDiffCompany}",
+                    "coverType": {
+                        "extCode": "{coverType}"
+                    },
+                    "insuredObjects": [{
+                            "asset": {
+                                "@type": "interfaces:AssetPersonIVO",
+                                "assetTypeVO": {
+                                    "id": 5
+                                },
+                                "contactExtNum": "{insuredExternalNumber}"
+                            },
+                            "lob": {
+                                "id": 1000001
+                            },
+                            "assetType": {
+                                "id": 5
+                            }
+                        }
+                    ],
+                    "collectionMethod": {
+                        "extCode": "QR-Bill"
+                    },
+                    "channel": {
+                        "id": 100
+                    }
+                },
+                "version-description": "Legal Protection Driver"
+            }
+        ],
+        "id": 1000004,
+        "desc": "TCS Legal Protection Driver"
+    }, {
+        "extCode": "109",
+        "versions": [{
+                "end-date": null,
+                "version-code": "109",
+                "start-date": "2000-01-01T00:00:00",
+                "attributes": [{
+                        "attribute-name": "Family variant",
+                        "impact-other-attributes": false,
+                        "api-field-type": "string",
+                        "enum-service": "/idit-web/api/reference/TProductFamilyVariantTcs/filter?fieldList=externalCode",
+                        "required": true,
+                        "attribute-code": "familyVariant",
+                        "api-field-name": "familyVariant.extCode",
+                        "attribute-type": "dropdown"
+                    }, {
+                        "attribute-name": "Previous policy with different company?",
+                        "impact-other-attributes": false,
+                        "api-field-type": "boolean",
+                        "required": false,
+                        "attribute-code": "prevPolWithDiffCompany",
+                        "api-field-name": "prevPolWithDiffCompany",
+                        "attribute-type": "boolean"
+                    }
+                ],
+                "new-proposal-request-template": {
+                    "policyHolderExternalNumber": "{policyHolderExternalNumber}",
+                    "product": {
+                        "extCode": "109"
+                    },
+                    "startDate": "{policyStartDate}",
+                    "familyVariant": {
+                        "extCode": "{familyVariant}"
+                    },
+                    "prevPolWithDiffCompany": "{prevPolWithDiffCompany}",
+                    "insuredObjects": [{
+                            "asset": {
+                                "@type": "interfaces:AssetPersonIVO",
+                                "assetTypeVO": {
+                                    "id": 5
+                                },
+                                "contactExtNum": "{insuredExternalNumber}"
+                            },
+                            "lob": {
+                                "id": 1000000
+                            },
+                            "assetType": {
+                                "id": 5
+                            }
+                        }
+                    ],
+                    "collectionMethod": {
+                        "extCode": "QR-Bill"
+                    },
+                    "channel": {
+                        "id": 100
+                    }
+                },
+                "version-description": "Legal Protection Internet"
+            }
+        ],
+        "id": 1000005,
+        "desc": "TCS Legal Protection Internet"
+    }, {
+        "extCode": "108",
+        "versions": [{
+                "end-date": "2016-02-02T00:00:00",
+                "version-code": "108_2011",
+                "start-date": "2011-07-01T00:00:00",
+                "attributes": [{
+                        "attribute-name": "Family variant",
+                        "impact-other-attributes": false,
+                        "api-field-type": "string",
+                        "enum-service": "/idit-web/api/reference/TProductFamilyVariantTcs/filter?fieldList=externalCode",
+                        "required": true,
+                        "attribute-code": "familyVariant",
+                        "api-field-name": "familyVariant.extCode",
+                        "attribute-type": "dropdown"
+                    }, {
+                        "attribute-name": "Previous policy with different company?",
+                        "impact-other-attributes": false,
+                        "api-field-type": "boolean",
+                        "required": false,
+                        "attribute-code": "prevPolWithDiffCompany",
+                        "api-field-name": "prevPolWithDiffCompany",
+                        "attribute-type": "boolean"
+                    }
+                ],
+                "new-proposal-request-template": "",
+                "version-description": "TCS Legal Protection Private"
+            }, {
+                "end-date": "2018-02-28T00:00:00",
+                "version-code": "108_2016Plus",
+                "start-date": "2016-02-03T00:00:00",
+                "attributes": [{
+                        "attribute-name": "Family variant",
+                        "impact-other-attributes": false,
+                        "api-field-type": "string",
+                        "enum-service": "/idit-web/api/reference/TProductFamilyVariantTcs/filter?fieldList=externalCode",
+                        "required": true,
+                        "attribute-code": "familyVariant",
+                        "api-field-name": "familyVariant.extCode",
+                        "attribute-type": "dropdown"
+                    }, {
+                        "attribute-name": "Previous policy with different company?",
+                        "impact-other-attributes": false,
+                        "api-field-type": "boolean",
+                        "required": false,
+                        "attribute-code": "prevPolWithDiffCompany",
+                        "api-field-name": "prevPolWithDiffCompany",
+                        "attribute-type": "boolean"
+                    }
+                ],
+                "new-proposal-request-template": "",
+                "version-description": "TCS Legal Protection Private"
+            }, {
+                "end-date": null,
+                "version-code": "108_2016",
+                "start-date": "2018-03-01T00:00:00",
+                "attributes": [{
+                        "attribute-name": "Family variant",
+                        "impact-other-attributes": false,
+                        "api-field-type": "string",
+                        "enum-service": "/idit-web/api/reference/TProductFamilyVariantTcs/filter?fieldList=externalCode",
+                        "required": true,
+                        "attribute-code": "familyVariant",
+                        "api-field-name": "familyVariant.extCode",
+                        "attribute-type": "dropdown"
+                    }, {
+                        "attribute-name": "Previous policy with different company?",
+                        "impact-other-attributes": false,
+                        "api-field-type": "boolean",
+                        "required": false,
+                        "attribute-code": "prevPolWithDiffCompany",
+                        "api-field-name": "prevPolWithDiffCompany",
+                        "attribute-type": "boolean"
+                    }
+                ],
+                "new-proposal-request-template": {
+                    "policyHolderExternalNumber": "{policyHolderExternalNumber}",
+                    "product": {
+                        "extCode": "108"
+                    },
+                    "startDate": "{policyStartDate}",
+                    "familyVariant": {
+                        "extCode": "{familyVariant}"
+                    },
+                    "prevPolWithDiffCompany": "{prevPolWithDiffCompany}",
+                    "insuredObjects": [{
+                            "asset": {
+                                "@type": "interfaces:AssetPersonIVO",
+                                "assetTypeVO": {
+                                    "id": 5
+                                },
+                                "contactExtNum": "{insuredExternalNumber}"
+                            },
+                            "lob": {
+                                "id": 1000000
+                            },
+                            "assetType": {
+                                "id": 5
+                            }
+                        }
+                    ],
+                    "collectionMethod": {
+                        "extCode": "QR-Bill"
+                    },
+                    "channel": {
+                        "id": 100
+                    }
+                },
+                "version-description": "TCS Legal Protection Private"
+            }
+        ],
+        "id": 1000007,
+        "desc": "TCS Legal Protection Private"
+    }, {
+        "extCode": "105",
+        "versions": [{
+                "end-date": null,
+                "version-code": "105",
+                "start-date": "2020-12-17T00:00:00",
+                "attributes": [{
+                        "attribute-request-template": {
+                            "bikeTypeTCSVO": {
+                                "extCode": "{bikeType}"
+                            },
+                            "bikeBrandTCSVO": {
+                                "extCode": "{bikeBrand}"
+                            },
+                            "bikeColorTCSVO": {
+                                "extCode": "{bikeColor}"
+                            }
+                        },
+                        "attribute-name": "Insured bike details",
+                        "impact-other-attributes": false,
+                        "api-field-type": "object",
+                        "required": true,
+                        "attribute-code": "tableAssetBikeDetails",
+                        "api-field-name": "insuredObjects.assetBikeDetailsTCSIVOs",
+                        "attributes": [{
+                                "attribute-name": "Bike type",
+                                "impact-other-attributes": false,
+                                "api-field-type": "string",
+                                "enum-service": "/idit-web/api/reference/TBikeType/filter?fieldList=externalCode",
+                                "required": true,
+                                "attribute-code": "bikeType",
+                                "api-field-name": "assetBikeDetailsTCSIVOs[].bikeTypeTCSVO.extCode",
+                                "attribute-type": "dropdown"
+                            }, {
+                                "attribute-name": "Bike brand",
+                                "impact-other-attributes": false,
+                                "api-field-type": "string",
+                                "enum-service": "/idit-web/api/reference/TBikeBrand/filter?fieldList=externalCode",
+                                "required": true,
+                                "attribute-code": "bikeBrand",
+                                "api-field-name": "assetBikeDetailsTCSIVOs[].bikeBrandTCSVO.extCode",
+                                "attribute-type": "dropdown"
+                            }, {
+                                "attribute-name": "Bike color",
+                                "impact-other-attributes": false,
+                                "api-field-type": "string",
+                                "enum-service": "/idit-web/api/reference/TBikeColor/filter?fieldList=externalCode",
+                                "required": true,
+                                "attribute-code": "bikeColor",
+                                "api-field-name": "assetBikeDetailsTCSIVOs[].bikeColorTCSVO.extCode",
+                                "attribute-type": "dropdown"
+                            }, {
+                                "attribute-name": "Frame",
+                                "impact-other-attributes": false,
+                                "api-field-type": "string",
+                                "required": true,
+                                "attribute-code": "frame",
+                                "api-field-name": "assetBikeDetailsTCSIVOs[].frame",
+                                "attribute-type": "string"
+                            }, {
+                                "attribute-name": "Can reach over 25km/h?",
+                                "impact-other-attributes": false,
+                                "api-field-type": "string",
+                                "enum-service": "/idit-web/api/reference/TYesNo/filter?fieldList=externalCode",
+                                "required": false,
+                                "attribute-code": "canReachOver25kmPerHourRef",
+                                "api-field-name": "assetBikeDetailsTCSIVOs[].canReachOver25kmPerHourRef.extCode",
+                                "attribute-type": "dropdown"
+                            }, {
+                                "attribute-name": "Plate",
+                                "impact-other-attributes": false,
+                                "api-field-type": "string",
+                                "required": true,
+                                "attribute-code": "plate",
+                                "api-field-name": "assetBikeDetailsTCSIVOs[].plate",
+                                "attribute-type": "string"
+                            }, {
+                                "attribute-name": "Purchace date",
+                                "impact-other-attributes": false,
+                                "api-field-type": "date",
+                                "required": false,
+                                "attribute-code": "purchaseDate",
+                                "api-field-name": "assetBikeDetailsTCSIVOs[].purchaseDate",
+                                "attribute-type": "date"
+                            }, {
+                                "attribute-name": "First Registration date",
+                                "impact-other-attributes": false,
+                                "api-field-type": "date",
+                                "required": false,
+                                "attribute-code": "firstRegistrationDate",
+                                "api-field-name": "assetBikeDetailsTCSIVOs[].firstRegistrationDate",
+                                "attribute-type": "date"
+                            }
+                        ],
+                        "attribute-type": "array"
+                    }, {
+                        "attribute-request-template": {
+                            "insuranceAmountLevel": "cascoInsuranceLimit",
+                            "productLineOptionType": {
+                                "id": 1000066
+                            }
+                        },
+                        "attribute-name": "Casco insurance limit",
+                        "impact-other-attributes": false,
+                        "api-field-type": "integer",
+                        "enum-service": "/idit-web/api/reference/TProductLineOptionAmountJDO/filter?fieldList=levelNr&filter=productOptionId:1000066&filter=levelType:1",
+                        "required": true,
+                        "attribute-code": "cascoInsuranceLimit",
+                        "api-field-name": "insuredObjects.covers.[]",
+                        "attribute-type": "dropdown"
+                    }
+                ],
+                "new-proposal-request-template": {
+                    "policyHolderExternalNumber": "{policyHolderExternalNumber}",
+                    "product": {
+                        "extCode": "105"
+                    },
+                    "startDate": "{policyStartDate}",
+                    "insuredObjects": [{
+                            "asset": {
+                                "@type": "interfaces:AssetBikeTCSIVO",
+                                "assetTypeVO": {
+                                    "id": 1000000
+                                }
+                            },
+                            "lob": {
+                                "id": 1000003
+                            },
+                            "assetType": {
+                                "id": 1000000
+                            }
+                        }
+                    ],
+                    "collectionMethod": {
+                        "extCode": "QR-Bill"
+                    },
+                    "channel": {
+                        "id": 100
+                    }
+                },
+                "version-description": "TCS Bike Insurance"
+            }
+        ],
+        "id": 1000008,
+        "desc": "TCS Bike Insurance"
+    }, {
+        "extCode": "110",
+        "versions": [{
+                "end-date": null,
+                "version-code": "110",
+                "start-date": "2011-01-01T00:00:00",
+                "attributes": [{
+                        "attribute-name": "Previous policy with different company?",
+                        "impact-other-attributes": false,
+                        "api-field-type": "boolean",
+                        "required": false,
+                        "attribute-code": "prevPolWithDiffCompany",
+                        "api-field-name": "prevPolWithDiffCompany",
+                        "attribute-type": "boolean"
+                    }, {
+                        "attribute-name": "Country",
+                        "impact-other-attributes": false,
+                        "api-field-type": "string",
+                        "enum-service": "/idit-web/api/reference/TCountryLPB/filter?fieldList=externalCode",
+                        "required": true,
+                        "attribute-code": "countryCode",
+                        "api-field-name": "countryCode.extCode",
+                        "attribute-type": "dropdown"
+                    }, {
+                        "attribute-name": "Postal code",
+                        "impact-other-attributes": false,
+                        "api-field-type": "string",
+                        "required": true,
+                        "attribute-code": "zipCode",
+                        "api-field-name": "zipCode",
+                        "attribute-type": "string"
+                    }, {
+                        "attribute-name": "City",
+                        "impact-other-attributes": false,
+                        "api-field-type": "string",
+                        "required": true,
+                        "attribute-code": "cityName",
+                        "api-field-name": "cityName",
+                        "attribute-type": "string"
+                    }, {
+                        "attribute-name": "Street name",
+                        "impact-other-attributes": false,
+                        "api-field-type": "string",
+                        "required": true,
+                        "attribute-code": "streetName",
+                        "api-field-name": "streetName",
+                        "attribute-type": "string"
+                    }, {
+                        "attribute-name": "House nr",
+                        "impact-other-attributes": false,
+                        "api-field-type": "string",
+                        "required": true,
+                        "attribute-code": "houseNr",
+                        "api-field-name": "houseNr",
+                        "attribute-type": "string"
+                    }, {
+                        "attribute-name": "Apartment",
+                        "impact-other-attributes": false,
+                        "api-field-type": "string",
+                        "required": false,
+                        "attribute-code": "apartmentNr",
+                        "api-field-name": "apartmentNr",
+                        "attribute-type": "string"
+                    }, {
+                        "attribute-name": "POB",
+                        "impact-other-attributes": false,
+                        "api-field-type": "string",
+                        "required": false,
+                        "attribute-code": "pob",
+                        "api-field-name": "pob",
+                        "attribute-type": "string"
+                    }, {
+                        "attribute-name": "Address Addition (C/o)",
+                        "impact-other-attributes": false,
+                        "api-field-type": "string",
+                        "required": false,
+                        "attribute-code": "coName",
+                        "api-field-name": "coName",
+                        "attribute-type": "string"
+                    }, {
+                        "attribute-name": "Building value > CHF 2m?",
+                        "impact-other-attributes": false,
+                        "api-field-type": "string",
+                        "enum-service": "/idit-web/api/reference/TPropertyValue/filter?fieldList=externalCode",
+                        "required": true,
+                        "attribute-code": "propertyValue",
+                        "api-field-name": "propertyValueVO.extCode",
+                        "attribute-type": "dropdown"
+                    }, {
+                        "attribute-name": "Are you the owner of the property and do you live in it?",
+                        "impact-other-attributes": false,
+                        "api-field-type": "integer",
+                        "required": false,
+                        "attribute-code": "ownerLiveInProperty",
+                        "api-field-name": "ownerLiveInProperty",
+                        "attribute-type": "boolean"
+                    }
+                ],
+                "new-proposal-request-template": {
+                    "policyHolderExternalNumber": "{policyHolderExternalNumber}",
+                    "product": {
+                        "extCode": "110"
+                    },
+                    "startDate": "{policyStartDate}",
+                    "prevPolWithDiffCompany": "{prevPolWithDiffCompany}",
+                    "insuredObjects": [{
+                            "asset": {
+                                "@type": "interfaces:PropertyIVO",
+                                "assetTypeVO": {
+                                    "id": 2
+                                },
+                                "addressVO": {
+                                    "countryVO": {
+                                        "extCode": "{countryCode}"
+                                    },
+                                    "zipCode": "{zipCode}",
+                                    "cityName": "{cityName}",
+                                    "streetName": "{streetName}",
+                                    "houseNr": "{houseNr}"
+                                },
+                                "propertyValueVO": {
+                                    "extCode": "{propertyValueVO}"
+                                },
+                                "ownerLiveInProperty": "{ownerLiveInProperty}"
+                            },
+                            "lob": {
+                                "id": 1000002
+                            },
+                            "assetType": {
+                                "id": 2
+                            }
+                        }
+                    ],
+                    "collectionMethod": {
+                        "extCode": "QR-Bill"
+                    },
+                    "channel": {
+                        "id": 100
+                    }
+                },
+                "version-description": "Legal Protection Building"
+            }
+        ],
+        "id": 1000006,
+        "desc": "TCS Legal Protection Building"
+    }
+]
