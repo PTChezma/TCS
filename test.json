@@ -784,7 +784,7 @@
                         "attribute-type": "array"
                     }, {
                         "attribute-request-template": {
-                            "insuranceAmountLevel": cascoInsuranceLimit,
+                            "insuranceAmountLevel": "cascoInsuranceLimit",
                             "productLineOptionType": {
                                 "id": 1000066
                             }
