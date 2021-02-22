@@ -1,0 +1,425 @@
+body {
+    background-color: white !important
+}
+
+.theme-entry .runtime-form {
+    margin-top: 110px;
+}
+
+
+.theme-entry .grid-header-wrapper .grid-header-text,
+.theme-entry .panel-header-wrapper .panel-header-text,
+.theme-entry .grid-header-wrapper .grid-header-text > span,
+.theme-entry .panel-header-wrapper .panel-header-text > span {
+    color: #005AA0 !important;
+    text-transform: uppercase;
+    font-size: inherit;
+    display: block;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+.theme-entry .grid table.grid-content-table > tbody > tr, .theme-entry .grid table.grid-content-table > tr, .theme-entry .grid table.grid-content-table tr.nowrap td {
+    height: 48px !important;
+}
+
+.theme-entry .grid .grid-content-cell {
+    line-height: 32px;
+    #F8F8F4
+}
+
+.theme-entry .grid table.grid-content-table.zebra-stripes tr td {
+    background-color: #FFF !important;
+}
+
+.theme-entry .grid table.grid-content-table.zebra-stripes tr {
+    background-color: #FFF !important;
+    border: 1px white solid
+}
+
+.theme-entry .grid table.grid-content-table.zebra-stripes {
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+
+    .theme-entry .grid table.grid-content-table.zebra-stripes tr:nth-child(even):not(.action-row) td {
+        /*background-color: #FFEB00 !important;*/
+        background-color: #005AA0 !important;
+    }
+
+    .theme-entry .grid table.grid-content-table.zebra-stripes tr:hover td {
+        background-color: #FFEB00 !important;
+    }
+
+        .theme-entry .grid table.grid-content-table.zebra-stripes tr:hover td span {
+            color: black !important;
+        }
+
+    .theme-entry .grid table.grid-content-table.zebra-stripes tr.selected td {
+        background-color: #F8F8F4 !important;
+    }
+
+        .theme-entry .grid table.grid-content-table.zebra-stripes tr.selected td span {
+            color: #808080 !important;
+        }
+
+    .theme-entry .grid table.grid-content-table.zebra-stripes tr:nth-child(even):not(.action-row) td span {
+        font-family: "Open Sans", "Segoe UI", "Helvetica", sans-serif;
+        font-size: 1.2rem;
+        color: white
+    }
+
+    .theme-entry .grid table.grid-content-table.zebra-stripes tr td span {
+        height: 47px;
+        display: block !important;
+    }
+
+a[name="btn_filter_ALL"] {
+    background: #005AA0 !important;
+}
+
+a[name*="btn_filter"] {
+    border-radius: 6px;
+    margin: 0 4px 0 4px
+}
+
+a[name="btn_filter_Panier"], a[name="btn_filter_Offre"], a[name="btn_filter_Portfolio"], a[name="btn_filter_History"] {
+    background: #fff !important;
+    color: black !important;
+    min-width: 100px !important;
+}
+
+  a[name="btn_filter_History"]:hover {
+        background: #005AA0 !important;
+        color:white !important
+    }
+    a[name="btn_filter_History"]{
+        margin-left:28px !important
+    }
+
+
+    a[name="btn_filter_Panier"]::before, a[name="btn_filter_Portfolio"]::before, a[name="btn_filter_Offre"]::before {
+        content: '';
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        opacity: 0.8;
+        position: relative;
+        vertical-align: middle;
+        left: -7px;
+        top: -2px;
+    }
+
+    a[name="btn_filter_Panier"]::before {
+        background-color: #FFEB00;
+    }
+    a[name="btn_filter_Portfolio"]::before {
+        background-color: #FFFABF;
+    }
+    a[name="btn_filter_Offre"]::before {
+        background-color: #F59B00;
+    }
+
+a[name="btn_filter_Panier"]:hover {
+    background-color: #FFEB00 !important;
+    border: none !important
+}
+
+a[name="btn_filter_Portfolio"]:hover {
+    background-color: #FFFABF !important;
+    border: none !important
+}
+a[name="btn_filter_Offre"]:hover {
+    background-color: #F59B00 !important;
+    border:none !important
+}
+
+
+a[name="btn_Confirmer"] {
+    color: #090909;
+    font-weight: 600;
+    background-color: #ffeb00;
+    /* filter: none; */
+    /* background-image: url(); */
+    border: none !important;
+    /* height: 36px; */
+    /* line-height: 36px; */
+    /* margin-right: 1px; */
+    /* margin-bottom: -1px; */
+    padding-bottom: -10px;
+    position: relative;
+    right: -11px;
+    bottom: -9px;
+}
+a[name="btn_Cancel"] {
+    color: #090909;
+    font-weight: 600;
+    background-color: transparent;
+    /* filter: none; */
+    /* background-image: url(); */
+    border: none !important;
+    /* height: 36px; */
+    /* line-height: 36px; */
+    /* margin-right: 1px; */
+    /* margin-bottom: -1px; */
+    padding-bottom: -10px;
+    position: relative;
+    right: -11px;
+    bottom: -9px;
+}
+
+
+a[name="ButtonFamily"] {
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+a [name="btn_filter_Offre"]:hover {
+    background-color: #F59B00 !important;
+}
+
+#circle {
+    background-color: #808080 !important;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+
+.theme-entry .view .innerpanel > .grid, .theme-entry .view .innerpanel > .panel, .theme-entry .view-canvas > .grid, .theme-entry .view-canvas > .panel {
+    -moz-box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.35);
+    -ms-box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.theme-entry .view .innerpanel > .grid, .theme-entry .view .innerpanel > .panel, .theme-entry .view-canvas > .grid, .theme-entry .view-canvas > .panel {
+    -moz-box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.35);
+    -ms-box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border-bottom: 1px #e3e4e1 solid;
+}
+
+
+
+.btn-Ajouter {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor:pointer
+}
+    .btn-Ajouter:checked, .btn-Ajouter:focus, .btn-Ajouter:active, .btn-Ajouter::selection {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        color: white;
+        outline: none;
+    }
+
+.btn-Modifier {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    color: #424242;
+    cursor: pointer
+}
+    .btn-Modifier:checked, .btn-Modifier:focus, .btn-Modifier:active, .btn-Modifier::selection {
+        border: none;
+        outline: none;
+    }
+
+    div[name="TabClient"] span[controltype="Cell"] {
+        border: 2px solid #F1F2E9 !important;
+        border-radius: 4px;
+        display: block;
+        margin-left: 4px;
+    }
+
+.line-break {
+    height: 1px !important;
+    display: block !important;
+}
+
+
+
+.TCS_table {
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+
+
+.strikethrough {
+    position: relative;
+    color: #FF0000 !important
+}
+
+    .strikethrough:before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 50%;
+        right: 0;
+        border-top: 1px solid;
+        border-color: inherit;
+        -webkit-transform: rotate(-5deg);
+        -moz-transform: rotate(-5deg);
+        -ms-transform: rotate(-5deg);
+        -o-transform: rotate(-5deg);
+        transform: rotate(-5deg);
+    }
+.hidden{
+    display:none !important
+}
+
+.TCS_table .runtime-list-item {
+    display: inline-table !important;
+    line-height: 24px
+}
+
+
+a[name*="Sum"] {
+    border-radius: 6px;
+    margin: 0 4px 0 4px
+}
+
+a[name*="Sum_Button3"] {
+    border-radius: 6px;
+    border-color: transparent !important;
+    margin: 0 4px 0 4px
+}
+
+tr.border_bottom td {
+    border-bottom: 1px solid #005AA0 !important;
+}
+
+.panier {
+    background-color: white !important;
+    width: 170px !important;
+    display: inline-table;
+    padding-left: 30px;
+    background: url(/Runtime/Image.ashx?ImID=187) no-repeat white;
+    background: url(/Runtime/Image.ashx?ImID=187) no-repeat 1px 4px, #fff;
+    background-size: 28px 28px;
+}
+
+
+    .panier::after {
+        content: "En attend de paiement"
+    }
+
+/*.TCS_table tr.selected > td, .TCS_table tr.selected:not(.action-row) > td {
+    background-color: initial !important;
+    color: initial !important;
+}
+
+.TCS_table tr.selected > td, .TCS_table tr.selected > td {
+    background-color: initial !important;
+    color: initial !important;
+}
+
+.TCS_table tr.selected > td, .TCS_table tr:hover > td {
+    background-color: initial !important;
+    color: initial !important;
+}
+
+    .TCS_table tr.selected > td, .TCS_table tr:hover > td .runtime-list-item {
+        background-color: initial !important;
+        color: initial !important;
+    }*/
+
+
+/*.theme-entry .grid table.TCS_table tr.selected > td span, .theme-entry .grid table.TCS_table.zebra-stripes tr.selected:not(.action-row) > td span, .theme-entry .grid table.TCS_table tr:hover > td span, .theme-entry .grid table.TCS_table.zebra-stripes tr:not(.action-row):hover > td span, .theme-entry .grid table.TCS_table tr.selected > td h1, .theme-entry .grid table.TCS_table.zebra-stripes tr.selected:not(.action-row) > td h1, .theme-entry .grid table.TCS_table tr:hover > td h1, .theme-entry .grid table.TCS_table.zebra-stripes tr:not(.action-row):hover > td h1, .theme-entry .grid table.TCS_table tr.selected > td h2, .theme-entry .grid table.TCS_table.zebra-stripes tr.selected:not(.action-row) > td h2, .theme-entry .grid table.TCS_table tr:hover > td h2, .theme-entry .grid table.TCS_table.zebra-stripes tr:not(.action-row):hover > td h2, .theme-entry .grid table.TCS_table tr.selected > td h3, .theme-entry .grid table.TCS_table.zebra-stripes tr.selected:not(.action-row) > td h3, .theme-entry .grid table.TCS_table tr:hover > td h3, .theme-entry .grid table.TCS_table.zebra-stripes tr:not(.action-row):hover > td h3, .theme-entry .grid table.TCS_table tr.selected > td h4, .theme-entry .grid table.TCS_table.zebra-stripes tr.selected:not(.action-row) > td h4, .theme-entry .grid table.TCS_table tr:hover > td h4, .theme-entry .grid table.TCS_table.zebra-stripes tr:not(.action-row):hover > td h4, .theme-entry .grid table.TCS_table tr.selected > td label, .theme-entry .grid table.TCS_table.zebra-stripes tr.selected:not(.action-row) > td label, .theme-entry .grid table.TCS_table tr:hover > td label, .theme-entry .grid table.TCS_table.zebra-stripes tr:not(.action-row):hover > td label, .theme-entry .grid table.TCS_table tr.selected > td p, .theme-entry .grid table.TCS_table.zebra-stripes tr.selected:not(.action-row) > td p, .theme-entry .grid table.TCS_table tr:hover > td p, .theme-entry .grid table.TCS_table.zebra-stripes tr:not(.action-row):hover > td p, .theme-entry .grid table.TCS_table tr.selected > td div.grid-content-cell-wrapper, .theme-entry .grid table.TCS_table.zebra-stripes tr.selected:not(.action-row) > td div.grid-content-cell-wrapper, .theme-entry .grid table.TCS_table tr:hover > td div.grid-content-cell-wrapper, .theme-entry .grid table.TCS_table.zebra-stripes tr:not(.action-row):hover > td div.grid-content-cell-wrapper {
+    color: initial !important;
+    background-color: initial !important;
+}*/
+.tab-fields {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 17px;
+}
+.div-fields {
+    background-color: #f9fafb;
+    min-height:180px;
+    width:100%
+}
+.f-label {
+    display: inline-block;
+    width: 130px;
+    color: #595959;
+}
+.f-input {
+    min-width: 240px;
+    border-radius: 3px;
+    border: 1px solid #b8b8b8;
+    height: 28px;
+}
+.f-select {
+    min-width: 240px;
+    border-radius: 3px;
+    border: 1px solid #b8b8b8;
+    height: 28px;
+}
+.f-checkbox {
+    min-width: 240px;
+    border-radius: 3px;
+    border: 1px solid #b8b8b8;
+    height: 28px;
+}
+
+
+
+.round {
+    position: relative !important;;
+}
+
+    .round label {
+        background-color: #fff !important;
+        border: 1px solid #ccc !important;
+        border-radius: 50% !important;
+        cursor: pointer !important;
+        height: 28px !important;
+        left: 0 !important;
+        position: absolute !important;
+        top: 0 !important;
+        width: 28px !important;
+    }
+
+        .round label:after {
+            border: 2px solid #fff !important;
+            border-top: none;
+            border-right: none;
+            content: "";
+            height: 6px;
+            left: 7px;
+            opacity: 0;
+            position: absolute;
+            top: 8px;
+            transform: rotate(-45deg);
+            width: 12px;
+        }
+
+    .round input[type="checkbox"] {
+        visibility: hidden !important;
+    }
+
+        .round input[type="checkbox"]:checked + label {
+            background-color: #66bb6a !important;
+            border-color: #66bb6a ;
+        }
+
+            .round input[type="checkbox"]:checked + label:after {
+                opacity: 1;
+            }
+
